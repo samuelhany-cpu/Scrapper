@@ -4,7 +4,10 @@ Tests 100+ websites across multiple domains to validate detection accuracy
 """
 
 import sys
-from domain_patterns import detect_domain_type
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+
+from src.domain_patterns import detect_domain_type
 from test_cases_100plus import TEST_CASES
 from bs4 import BeautifulSoup
 import time

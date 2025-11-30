@@ -1,14 +1,16 @@
 """Quick CLI for scraping websites with adaptive scraper (requests-only version)"""
 import sys
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+
 import requests
 from bs4 import BeautifulSoup
-from adaptive_scraper import AdaptiveSmartScraper
-from logger import ScraperLogger
+from src.adaptive_scraper import AdaptiveSmartScraper
+from src.logger import ScraperLogger
 import pandas as pd
-import os
 from datetime import datetime
 import re
-from config import Config
+from src.config import Config
 
 def scrape_with_requests(url):
     """Scrape using requests (faster, no browser needed)"""

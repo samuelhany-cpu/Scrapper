@@ -3,10 +3,10 @@ import os
 import sys
 from datetime import datetime
 
-from config import Config
-from logger import ScraperLogger
-from scraper_selenium import UniversalScraper  # Using Selenium for Python 3.13 compatibility
-from report_generator import ReportGenerator
+from src.config import Config
+from src.logger import ScraperLogger
+from src.scraper_selenium import UniversalScraper  # Using Selenium for Python 3.13 compatibility
+from src.report_generator import ReportGenerator
 import pandas as pd
 
 # Page configuration

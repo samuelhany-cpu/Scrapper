@@ -9,12 +9,11 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes, CallbackQueryHandler
 from telegram.constants import ParseMode
 
-from config import Config
-from logger import ScraperLogger
-from adaptive_scraper import AdaptiveSmartScraper
-from twitter_gallerydl_auth import TwitterGalleryDLScraperAuth
-from report_generator import ReportGenerator
-from language import LanguageSupport, t
+from src.config import Config
+from src.logger import ScraperLogger
+from src.adaptive_scraper import AdaptiveSmartScraper
+from src.report_generator import ReportGenerator
+from src.language import LanguageSupport, t
 
 # Bot Configuration
 BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN', 'YOUR_BOT_TOKEN_HERE')

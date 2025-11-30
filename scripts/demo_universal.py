@@ -2,8 +2,11 @@
 🎯 UNIVERSAL SCRAPER DEMO
 Quick demonstration of the universal scraper capabilities
 """
+import sys
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
-from domain_patterns import detect_domain_type
+from src.domain_patterns import detect_domain_type
 from colorama import init, Fore, Style
 
 init()  # Initialize colorama
