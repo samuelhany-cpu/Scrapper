@@ -1,7 +1,7 @@
 import logging
 import os
 from datetime import datetime
-from config import Config
+from .config import Config
 
 class ScraperLogger:
     def __init__(self, session_id=None):

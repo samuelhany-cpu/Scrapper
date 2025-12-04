@@ -1,0 +1,61 @@
+{
+  "url": "http://quotes.toscrape.com",
+  "started_at": "2025-12-04 23:05:56",
+  "steps": [
+    {
+      "name": "html_analysis",
+      "status": "success",
+      "timestamp": "2025-12-04 23:05:57",
+      "details": {
+        "analysis_file": "F:\\Scrapper\\scripts\\..\\outputs\\quotes_toscrape_com_20251204_230556_analysis.json",
+        "total_elements": 3
+      }
+    },
+    {
+      "name": "scraper_generation",
+      "status": "success",
+      "timestamp": "2025-12-04 23:05:57",
+      "details": {
+        "scraper_file": "F:\\Scrapper\\scripts\\..\\outputs\\quotes_toscrape_com_20251204_230556_scraper.py"
+      }
+    },
+    {
+      "name": "scraper_execution",
+      "status": "success",
+      "timestamp": "2025-12-04 23:06:02",
+      "details": {
+        "data_file": "F:\\Scrapper\\scripts\\..\\outputs\\scraped_quotes_toscrape_com_20251204_230601.csv",
+        "output": "\n====================================================================================================\nStarting scrape of quotes.toscrape.com\n====================================================================================================\nFetching: http://quotes.toscrape.com\n   Success (11064 bytes)\n\nExtracted 14 items\n\nSaved 14 items to: scraped_quotes_toscrape_com_20251204_230601.csv\nSaved 14 items to: scraped_quotes_toscrape_com_20251204_230601.json\n\n======================================="
+      }
+    },
+    {
+      "name": "data_analysis",
+      "status": "success",
+      "timestamp": "2025-12-04 23:06:06",
+      "details": {
+        "analysis_file": "F:\\Scrapper\\scripts\\..\\outputs\\quotes_toscrape_com_20251204_230556_data_analysis.json",
+        "charts_created": 5
+      }
+    },
+    {
+      "name": "pdf_generation",
+      "status": "success",
+      "timestamp": "2025-12-04 23:06:07",
+      "details": {
+        "pdf_file": "F:\\Scrapper\\scripts\\..\\outputs\\quotes_toscrape_com_20251204_230556_report.pdf"
+      }
+    }
+  ],
+  "files_generated": [
+    "F:\\Scrapper\\scripts\\..\\outputs\\quotes_toscrape_com_20251204_230556_analysis.json",
+    "F:\\Scrapper\\scripts\\..\\outputs\\quotes_toscrape_com_20251204_230556_scraper.py",
+    "F:\\Scrapper\\scripts\\..\\outputs\\scraped_quotes_toscrape_com_20251204_230601.csv",
+    "F:\\Scrapper\\scripts\\..\\outputs\\quotes_toscrape_com_20251204_230556_data_analysis.json",
+    "F:\\Scrapper\\scripts\\..\\outputs\\charts\\data_completeness.png",
+    "F:\\Scrapper\\scripts\\..\\outputs\\charts\\distribution_content.png",
+    "F:\\Scrapper\\scripts\\..\\outputs\\charts\\distribution_classes.png",
+    "F:\\Scrapper\\scripts\\..\\outputs\\charts\\distribution_title.png",
+    "F:\\Scrapper\\scripts\\..\\outputs\\charts\\distribution_link.png",
+    "F:\\Scrapper\\scripts\\..\\outputs\\quotes_toscrape_com_20251204_230556_report.pdf"
+  ]
+}

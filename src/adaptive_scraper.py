@@ -10,9 +10,9 @@ from bs4 import BeautifulSoup
 import pandas as pd
 from urllib.parse import urljoin, urlparse
 import validators
-from config import Config
-from logger import ScraperLogger
-from ai_analyzer import AIContentAnalyzer
+from .config import Config
+from .logger import ScraperLogger
+from .ai_analyzer import AIContentAnalyzer
 import re
 import os
 import time

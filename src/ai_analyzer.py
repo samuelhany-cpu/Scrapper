@@ -1,6 +1,6 @@
 import json
 import os
-from config import Config
+from .config import Config
 
 class AIContentAnalyzer:
     def __init__(self, logger):

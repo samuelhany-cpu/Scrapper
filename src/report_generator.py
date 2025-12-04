@@ -6,7 +6,7 @@ from reportlab.lib import colors
 from reportlab.lib.enums import TA_LEFT, TA_CENTER, TA_RIGHT
 from datetime import datetime
 import os
-from config import Config
+from .config import Config
 
 class ReportGenerator:
     def __init__(self, logger, scraper):

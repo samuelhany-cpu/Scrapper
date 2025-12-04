@@ -33,11 +33,17 @@ env/
 logs/
 *.log
 
-# Output Files
+# Output Files (exclude generated outputs but keep examples)
 output/
+outputs/*.csv
+outputs/*.json
+outputs/*.pdf
+outputs/*.png
+outputs/charts/
 reports/
-*.csv
-*.pdf
+
+# Keep example files
+!examples/
 
 # IDE
 .vscode/
@@ -48,6 +54,17 @@ reports/
 
 # OS
 .DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+~$*
+
+# Test files
+test_*.html
+*.test
 Thumbs.db
 desktop.ini
 

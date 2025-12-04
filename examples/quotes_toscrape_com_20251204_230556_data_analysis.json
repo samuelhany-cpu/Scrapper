@@ -1,0 +1,115 @@
+{
+  "file": "F:\\Scrapper\\scripts\\..\\outputs\\scraped_quotes_toscrape_com_20251204_230601.csv",
+  "analyzed_at": "2025-12-04 23:06:02",
+  "statistics": {
+    "total_rows": 14,
+    "total_columns": 5,
+    "columns": [
+      "content",
+      "classes",
+      "id",
+      "title",
+      "link"
+    ],
+    "memory_usage": "15.31 KB",
+    "column_details": {
+      "content": {
+        "dtype": "object",
+        "non_null": 14,
+        "null": 0,
+        "unique": 14,
+        "avg_length": 425.2857142857143,
+        "max_length": 1525,
+        "min_length": 78
+      },
+      "classes": {
+        "dtype": "object",
+        "non_null": 14,
+        "null": 0,
+        "unique": 5,
+        "avg_length": 10.428571428571429,
+        "max_length": 24,
+        "min_length": 7
+      },
+      "id": {
+        "dtype": "float64",
+        "non_null": 0,
+        "null": 14,
+        "unique": 0,
+        "mean": null,
+        "median": null,
+        "std": null,
+        "min": null,
+        "max": null
+      },
+      "title": {
+        "dtype": "object",
+        "non_null": 3,
+        "null": 11,
+        "unique": 2
+      },
+      "link": {
+        "dtype": "object",
+        "non_null": 14,
+        "null": 0,
+        "unique": 10,
+        "avg_length": 45.42857142857143,
+        "max_length": 51,
+        "min_length": 27
+      }
+    }
+  },
+  "insights": [
+    {
+      "type": "size",
+      "message": "Dataset contains 14 records across 5 columns."
+    },
+    {
+      "type": "info",
+      "column": "content",
+      "message": "Column 'content' contains unique values (potential ID field)."
+    },
+    {
+      "type": "info",
+      "column": "content",
+      "message": "Column 'content' contains long text (avg 425 characters)."
+    },
+    {
+      "type": "warning",
+      "column": "id",
+      "message": "Column 'id' has 100.0% missing data."
+    },
+    {
+      "type": "warning",
+      "column": "title",
+      "message": "Column 'title' has 78.6% missing data."
+    },
+    {
+      "type": "distribution",
+      "column": "content",
+      "message": "Most common value in 'content': 'Quotes to ScrapeLogin“The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”byAlbert Einstein(about)Tags:changedeep-thoughtsthinkingworld“It is our choices, Harry, that show what we truly are, far more than our abilities.”byJ.K. Rowling(about)Tags:abilitieschoices“There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.”byAlbert Einstein(about)Tags:inspirationallifelivemiraclemiracles“The person, be it gentleman or lady, who has not pleasure in a good novel, must be intolerably stupid.”byJane Austen(about)Tags:aliteracybooksclassichumor“Imperfection is beauty, madness is genius and it's better to be absolutely ridiculous than absolutely boring.”byMarilyn Monroe(about)Tags:be-yourselfinspirational“Try not to become a man of success. Rather become a man of value.”byAlbert Einstein(about)Tags:adulthoodsuccessvalue“It is better to be hated for what you are than to be loved for what you are not.”byAndré Gide(about)Tags:lifelove“I have not failed. I've just found 10,000 ways that won't work.”byThomas A. Edison(about)Tags:edisonfailureinspirationalparaphrased“A woman is like a tea bag; you never know how strong it is until it's in hot water.”byEleanor Roosevelt(about)Tags:misattributed-eleanor-roosevelt“A day without sunshine is like, you know, night.”bySteve Martin(about)Tags:humorobvioussimileNext→Top Ten tagsloveinspirationallifehumorbooksreadingfriendshipfriendstruthsimile' (1 occurrences)"
+    },
+    {
+      "type": "distribution",
+      "column": "classes",
+      "message": "Most common value in 'classes': '['quote']' (10 occurrences)"
+    },
+    {
+      "type": "distribution",
+      "column": "title",
+      "message": "Most common value in 'title': 'Top Ten tags' (2 occurrences)"
+    },
+    {
+      "type": "distribution",
+      "column": "link",
+      "message": "Most common value in 'link': 'http://quotes.toscrape.com/author/Albert-Einstein' (5 occurrences)"
+    }
+  ],
+  "charts": [
+    "F:\\Scrapper\\scripts\\..\\outputs\\charts\\data_completeness.png",
+    "F:\\Scrapper\\scripts\\..\\outputs\\charts\\distribution_content.png",
+    "F:\\Scrapper\\scripts\\..\\outputs\\charts\\distribution_classes.png",
+    "F:\\Scrapper\\scripts\\..\\outputs\\charts\\distribution_title.png",
+    "F:\\Scrapper\\scripts\\..\\outputs\\charts\\distribution_link.png"
+  ]
+}

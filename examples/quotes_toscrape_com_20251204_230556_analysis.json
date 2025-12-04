@@ -1,0 +1,44 @@
+{
+  "url": "http://quotes.toscrape.com",
+  "domain": "quotes.toscrape.com",
+  "analyzed_at": "2025-12-04 23:05:56",
+  "structure": {
+    "total_elements": 3,
+    "unique_tags": 3,
+    "tag_distribution": {
+      "html": 1,
+      "body": 1,
+      "p": 1
+    },
+    "total_links": 0,
+    "internal_links": 0,
+    "external_links": 0,
+    "sample_internal_links": [],
+    "data_attributes": {}
+  },
+  "content_patterns": {
+    "repeating_classes": {},
+    "list_patterns": [],
+    "text_blocks": [
+      {
+        "tag": "p",
+        "classes": [],
+        "id": "",
+        "text_length": 1653,
+        "preview": "a�=  ~�+������!P�jm�8�z�AҳАѰ��U�����k֩���v6\"���5��y�Hh�.�&R��Dȍ�j�Vm@�=k�4||8�6�ѫ�h���A��q�������w��b��m�\n��/6�  _**O����j�USZ�9�n���y�z��Զ�V �aL��m)F��V$��lK7��� Y�� ��G���U/��~Kq�Z�)�W����(R���'��֯�"
+      }
+    ]
+  },
+  "scraping_strategy": {
+    "recommended_approach": "",
+    "selectors": [],
+    "extraction_rules": [
+      {
+        "type": "text_content",
+        "description": "Extract main text blocks",
+        "method": "get_text()"
+      }
+    ],
+    "pagination": null
+  }
+}
