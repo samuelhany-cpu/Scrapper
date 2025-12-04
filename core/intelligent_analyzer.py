@@ -30,7 +30,7 @@ class IntelligentAnalyzer:
     
     def fetch_page(self):
         """Fetch the HTML page with proper headers"""
-        print(f"\n🌐 Fetching: {self.url}")
+        print(f"\n[FETCH] Target: {self.url}")
         
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
@@ -54,7 +54,7 @@ class IntelligentAnalyzer:
     
     def analyze_structure(self):
         """Analyze the overall HTML structure"""
-        print("\n🔍 Analyzing HTML structure...")
+        print("\n[ANALYSIS] HTML structure...")
         
         # Count all tags
         all_tags = [tag.name for tag in self.soup.find_all()]
@@ -71,9 +71,9 @@ class IntelligentAnalyzer:
             self.analysis['structure']['main_content_classes'] = main_content.get('class', [])
             self.analysis['structure']['main_content_id'] = main_content.get('id', '')
         
-        print(f"   📊 Total elements: {len(all_tags)}")
-        print(f"   📊 Unique tags: {len(tag_counts)}")
-        print(f"   📊 Most common: {tag_counts.most_common(5)}")
+        print(f"   Total elements: {len(all_tags)}")
+        print(f"   Unique tags: {len(tag_counts)}")
+        print(f"   Most common: {tag_counts.most_common(5)}")
     
     def _identify_main_content(self):
         """Identify the main content container using heuristics"""
@@ -106,7 +106,7 @@ class IntelligentAnalyzer:
     
     def analyze_content_patterns(self):
         """Identify repeating content patterns (lists, cards, articles, etc.)"""
-        print("\n🔍 Analyzing content patterns...")
+        print("\n[ANALYSIS] Content patterns...")
         
         patterns = []
         
@@ -135,9 +135,9 @@ class IntelligentAnalyzer:
         text_blocks = self._find_text_blocks()
         self.analysis['content_patterns']['text_blocks'] = text_blocks
         
-        print(f"   📋 Found {len(repeating_classes)} repeating class patterns")
-        print(f"   📋 Found {len(lists)} list-like structures")
-        print(f"   📋 Found {len(text_blocks)} significant text blocks")
+        print(f"   Found {len(repeating_classes)} repeating class patterns")
+        print(f"   Found {len(lists)} list-like structures")
+        print(f"   Found {len(text_blocks)} significant text blocks")
     
     def _find_list_patterns(self):
         """Find list-like repeating structures"""
@@ -203,7 +203,7 @@ class IntelligentAnalyzer:
     
     def analyze_links(self):
         """Analyze links on the page"""
-        print("\n🔍 Analyzing links...")
+        print("\n[ANALYSIS] Links...")
         
         all_links = self.soup.find_all('a', href=True)
         
@@ -224,13 +224,13 @@ class IntelligentAnalyzer:
         self.analysis['structure']['external_links'] = len(external_links)
         self.analysis['structure']['sample_internal_links'] = internal_links[:10]
         
-        print(f"   🔗 Total links: {len(all_links)}")
-        print(f"   🔗 Internal: {len(internal_links)}")
-        print(f"   🔗 External: {len(external_links)}")
+        print(f"   Total links: {len(all_links)}")
+        print(f"   Internal: {len(internal_links)}")
+        print(f"   External: {len(external_links)}")
     
     def analyze_data_attributes(self):
         """Find elements with data attributes (often contain structured data)"""
-        print("\n🔍 Analyzing data attributes...")
+        print("\n[ANALYSIS] Data attributes...")
         
         data_attrs = {}
         
@@ -250,11 +250,11 @@ class IntelligentAnalyzer:
             sorted(data_summary.items(), key=lambda x: x[1], reverse=True)[:20]
         )
         
-        print(f"   📊 Found {len(data_attrs)} unique data-* attributes")
+        print(f"   Found {len(data_attrs)} unique data-* attributes")
     
     def generate_scraping_strategy(self):
         """Generate recommended scraping strategy based on analysis"""
-        print("\n🎯 Generating scraping strategy...")
+        print("\n[STRATEGY] Generating scraping strategy...")
         
         strategy = {
             'recommended_approach': '',
@@ -304,35 +304,35 @@ class IntelligentAnalyzer:
             }
         
         self.analysis['scraping_strategy'] = strategy
-        print(f"   ✅ Strategy: {strategy['recommended_approach']}")
+        print(f"   Strategy: {strategy['recommended_approach']}")
     
     def save_analysis(self, output_path):
         """Save analysis to JSON file"""
         with open(output_path, 'w', encoding='utf-8') as f:
             json.dump(self.analysis, f, indent=2, ensure_ascii=False)
-        print(f"\n💾 Analysis saved to: {output_path}")
+        print(f"\n[SAVE] Analysis saved to: {output_path}")
     
     def print_summary(self):
         """Print a human-readable summary"""
         print("\n" + "=" * 100)
-        print("📊 ANALYSIS SUMMARY")
+        print("ANALYSIS SUMMARY")
         print("=" * 100)
         
-        print(f"\n🌐 URL: {self.url}")
-        print(f"🌐 Domain: {self.domain}")
+        print(f"\nURL: {self.url}")
+        print(f"Domain: {self.domain}")
         
-        print(f"\n📋 Structure:")
+        print(f"\nStructure:")
         print(f"   Total Elements: {self.analysis['structure'].get('total_elements', 0)}")
         print(f"   Unique Tags: {self.analysis['structure'].get('unique_tags', 0)}")
         print(f"   Total Links: {self.analysis['structure'].get('total_links', 0)}")
         
-        print(f"\n🔍 Content Patterns:")
+        print(f"\nContent Patterns:")
         patterns = self.analysis['content_patterns'].get('list_patterns', [])
         print(f"   Repeating Structures: {len(patterns)}")
         if patterns:
             print(f"   Best Pattern: {patterns[0].get('type')} with {patterns[0].get('item_count')} items")
         
-        print(f"\n🎯 Recommended Scraping Strategy:")
+        print(f"\nRecommended Scraping Strategy:")
         strategy = self.analysis['scraping_strategy']
         print(f"   Approach: {strategy.get('recommended_approach', 'custom')}")
         print(f"   Selectors: {len(strategy.get('selectors', []))}")

@@ -42,6 +42,9 @@ outputs/*.png
 outputs/charts/
 reports/
 
+# EgyptAir Archive (not for GitHub)
+egyptair_archive/
+
 # Keep example files
 !examples/
 
